@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.knesek</groupId>
+  <artifactId>clusterprimitives</artifactId>
+  <versioning>
+    <versions>
+      <version>0.10-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20141116192734</lastUpdated>
+  </versioning>
+</metadata>
