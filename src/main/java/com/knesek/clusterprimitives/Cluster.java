@@ -31,4 +31,10 @@ public interface Cluster {
 	 */
 	Member getLeader();
 
+
+	/**
+	 * Get reference to underlying library's cluster/connection/client object.
+	 */
+	Object unwrap();
+
 }

@@ -33,6 +33,8 @@ public class JGroupsCluster implements Receiver, Cluster {
 		leaderElectionStrategy = new SimpleLeaderElectionStrategy();
 	}
 
+
+
 	private volatile View view = null;
 
 	public synchronized View getView() {
@@ -49,6 +51,14 @@ public class JGroupsCluster implements Receiver, Cluster {
 
 	public JGroupsMember getLeader() {
 		return new JGroupsMember(leaderElectionStrategy.electLeader(getView()));
+	}
+
+	/**
+	 * Get reference to underlying library's cluster/connection/client object.
+	 */
+	@Override
+	public Object unwrap() {
+		return channel;
 	}
 
 	public boolean isLeader() {
